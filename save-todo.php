@@ -8,6 +8,10 @@
         // echo "</pre>";
 
         $todo_item = $_POST['todo'];
-        echo "you have entered ". $todo_item;
+        $sql = "INSERT INTO todo_list (title) VALUES ('$todo_item')";
+        $result = mysqli_query($conn,$sql);
+        if($result){
+            header('Location: ./index.php');
+        }
     }
 ?>

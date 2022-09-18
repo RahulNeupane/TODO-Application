@@ -54,19 +54,12 @@
                   <tr>
                     <td> <?php echo $row['id']?></td>
                     <td> <?php echo $row['title']?></td>
-                    <td><button class='btn btn-outline-secondary'>Edit</button>
-                    <td><button class='btn btn-outline-danger'>Delete</button>
+                    <td><button class='btn btn-secondary'>Edit</button>
+                    <button class='btn btn-danger'><a href="./delete.php?deleteid=<?php echo $row['id']?>" class='text-light' style="text-decoration:none">Delete</a></button></td>
                   </tr>
                 <?php
                   }
                 ?>
-                
-                <!-- <tr>
-                <th scope="row"><?php echo $row['id'] ?></th>
-                <td><?php echo $row['title'] ?></td>
-                <td><button class='btn btn-outline-secondary'>Edit</button>
-                <td><button class='btn btn-outline-danger'>Delete</button>
-            </tr> -->
             </tbody>
         </table>
     </div>
