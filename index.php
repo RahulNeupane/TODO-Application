@@ -52,9 +52,9 @@
                 <?php
                   while($row = $result->fetch_assoc()) { ?>
                   <tr>
-                    <td> <?php echo $row['id']?></td>
+                    <th> <?php echo $row['id']?></th>
                     <td> <?php echo $row['title']?></td>
-                    <td><button class='btn btn-secondary'>Edit</button>
+                    <td><button class='btn btn-secondary'><a href="./update.php?updateid=<?php echo $row['id']?>" class='text-light' style="text-decoration:none">Update</a></button>
                     <button class='btn btn-danger'><a href="./delete.php?deleteid=<?php echo $row['id']?>" class='text-light' style="text-decoration:none">Delete</a></button></td>
                   </tr>
                 <?php
