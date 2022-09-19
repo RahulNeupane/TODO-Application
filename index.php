@@ -3,25 +3,6 @@
   
   $sql = "SELECT * FROM todo_list";
   $result = $conn->query($sql);
-  // echo "<pre>";
-  // print_r($result);
-  // echo "</pre>";
-
-  // $row = $result->fetch_assoc();
-  // print_r($row);
-
-  // $count = 2;
-  // while($count<=0){
-  //   $count--;
-  //   echo "fetch again";
-  //   $row2 = $result->fetch_assoc();
-  //   print_r($row2);
-  // }
-
-    // while($row = $result->fetch_assoc()){
-    // print_r($row);
-  // }
-
 ?>
 
 
@@ -43,7 +24,7 @@
         <table class="table table-striped mt-5">
             <thead>
                 <tr>
-                <th scope="col">#</th>
+                <th scope="col">ID</th>
                 <th scope="col">TODO item</th>
                 <th scope="col">Actions</th>
                 </tr>
@@ -52,10 +33,10 @@
                 <?php
                   while($row = $result->fetch_assoc()) { ?>
                   <tr>
-                    <th> <?php echo $row['id']?></th>
+                    <td> <?php echo $row['id']?></td>
                     <td> <?php echo $row['title']?></td>
-                    <td><button class='btn btn-secondary'><a href="./update.php?updateid=<?php echo $row['id']?>" class='text-light' style="text-decoration:none">Update</a></button>
-                    <button class='btn btn-danger'><a href="./delete.php?deleteid=<?php echo $row['id']?>" class='text-light' style="text-decoration:none">Delete</a></button></td>
+                    <td><button class='btn btn-secondary'><a href='update.php?updateid=<?php echo $row['id']?>' class="text-light" style="text-decoration:none">Update</a></button>
+                    <button class='btn btn-danger'><a href='delete.php?deleteid=<?php echo $row['id']?>' class="text-light" style="text-decoration:none">Delete</a></button></td>
                   </tr>
                 <?php
                   }
@@ -64,7 +45,7 @@
         </table>
     </div>
  
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
