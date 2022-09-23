@@ -26,7 +26,6 @@
           $todo = $_POST['todo'];
           $sql = "update todo_list set title='$todo' where id=$id";
           $result = mysqli_query($conn,$sql);
-          echo $result;
           if($result){
             header('Location: index.php');
           }else{
